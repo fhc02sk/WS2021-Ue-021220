@@ -34,6 +34,13 @@ public class Rezept {
         }
     }
 
+    public Rezept umrechnen (int personen) {
+        // Umrechnenfaktor berechnen und speichern personen / this.personen
+        // neues Rezept Objekt anlegen
+        // Zutat für Zutat übernehmen und mit Umrechenfaktor neu berechnen
+        return null;
+    }
+
     public String toString() {
         return "Rezept{" +
                 "name='" + name + '\'' +
