@@ -29,7 +29,14 @@ public class DemoRezeptApp {
         Rezept weihnachtsKeks = new Rezept("Weihnachts Keks light", 4, zutaten);
         weihnachtsKeks.printRezept();
         
-        
+        Rezept wk10 = weihnachtsKeks.umrechnen(10);
+        wk10.printRezept();
+        weihnachtsKeks.printRezept();
+
+
+
+
+
         /* Initialisierung Array */
         int[] arr1 = new int[] { 1, 2, 3, 4, 5};    // Variante 1
         int[] arr2 = { 1, 2, 3, 4, 5};              // Variante 2

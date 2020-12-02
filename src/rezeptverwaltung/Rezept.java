@@ -41,16 +41,24 @@ public class Rezept {
         double faktor = personen / (getPersonen() * 1.0);
 //        double faktor1 = personen / ((double)getPersonen());
 
+        Zutat[] neueZutaten = new Zutat[this.zutaten.length];
+        for (int i = 0; i < this.zutaten.length; i++){
+            neueZutaten[i] = new Zutat(
+                    this.zutaten[i].getName(),
+                    (int) (this.zutaten[i].getMenge() * faktor)
+            );
+        }
+
         // neues Rezept Objekt anlegen
-        Rezept neu = new Rezept(this.name, personen, this.zutaten);
+        Rezept neu = new Rezept(this.name, personen, neueZutaten);
 
         // Zutat für Zutat übernehmen und mit Umrechenfaktor neu berechnen
-        for (int i = 0; i < neu.getZutaten().length; i++){
+        /*for (int i = 0; i < neu.getZutaten().length; i++){
             Zutat z = neu.getZutaten()[i]; // Zutat um Zutat wird in z geschrieben
             int menge = z.getMenge();
             menge = (int) (menge * faktor);
             z.setMenge(menge);
-        }
+        }*/
 
         return neu;
     }
