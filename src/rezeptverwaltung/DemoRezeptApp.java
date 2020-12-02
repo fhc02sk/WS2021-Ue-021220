@@ -39,7 +39,7 @@ public class DemoRezeptApp {
 
         /* Initialisierung Array */
         int[] arr1 = new int[] { 1, 2, 3, 4, 5};    // Variante 1
-        int[] arr2 = { 1, 2, 3, 4, 5};              // Variante 2
+        int[] arr2 = {1, 2, 3, 4, 5};               // Variante 2
         int[] arr3 = new int[5];                    // Variante 3
         arr3[0] = 1; 
         arr3[1] = 2;
