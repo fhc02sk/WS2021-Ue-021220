@@ -1,6 +1,7 @@
 package rezeptverwaltung;
 
 import java.time.ZonedDateTime;
+import java.util.Arrays;
 
 public class DemoRezeptApp {
 
@@ -22,11 +23,20 @@ public class DemoRezeptApp {
 
         Zutat mehl = new Zutat("Mehl 480 universal", 250);
 
-        int[] arr = {1, 2, 3, 4};
         Zutat[] zutaten = {butter, zucker, mehl, omasGeheimZutat};
 
         System.out.println();
         Rezept weihnachtsKeks = new Rezept("Weihnachts Keks light", 4, zutaten);
         weihnachtsKeks.printRezept();
+        
+        
+        /* Initialisierung Array */
+        int[] arr1 = new int[] { 1, 2, 3, 4, 5};    // Variante 1
+        int[] arr2 = { 1, 2, 3, 4, 5};              // Variante 2
+        int[] arr3 = new int[5];                    // Variante 3
+        arr3[0] = 1; 
+        arr3[1] = 2;
+        arr3[2] = 3; arr3[3] = 4; arr3[4] = 5;
+
     }
 }

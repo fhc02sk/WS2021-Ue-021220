@@ -36,9 +36,23 @@ public class Rezept {
 
     public Rezept umrechnen (int personen) {
         // Umrechnenfaktor berechnen und speichern personen / this.personen
+                        // 8 / 2 = 4
+                        // 4 / 8 = 0,5
+        double faktor = personen / (getPersonen() * 1.0);
+//        double faktor1 = personen / ((double)getPersonen());
+
         // neues Rezept Objekt anlegen
+        Rezept neu = new Rezept(this.name, personen, this.zutaten);
+
         // Zutat für Zutat übernehmen und mit Umrechenfaktor neu berechnen
-        return null;
+        for (int i = 0; i < neu.getZutaten().length; i++){
+            Zutat z = neu.getZutaten()[i]; // Zutat um Zutat wird in z geschrieben
+            int menge = z.getMenge();
+            menge = (int) (menge * faktor);
+            z.setMenge(menge);
+        }
+
+        return neu;
     }
 
     public String toString() {
